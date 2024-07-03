@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "vergi-hesaplama"
+version = "0.1.0"
+description = ""
+authors = ["enesalsat <e.alsat@digitastic.app>"]
+readme = "README.md"
+packages = [{include = "vergi_hesaplama", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+jupyter = "^1.0.0"
+flet = "^0.23.1"
+selenium = "^4.22.0"
+beautifulsoup4 = "^4.12.3"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+vergi-hesaplama = "vergi_hesaplama.calculate:main"
